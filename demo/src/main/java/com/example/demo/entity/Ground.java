@@ -1,12 +1,16 @@
 package com.example.demo.entity;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
 @Table(name="grounds")
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 
 public class Ground {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "grounds_setup_seq_gen")
@@ -16,5 +20,6 @@ public class Ground {
 
     @Column(name = "groundName", nullable = false,length = 100)
     private String groundName;
+
 
 }

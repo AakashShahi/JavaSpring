@@ -1,7 +1,13 @@
 package com.example.demo.entity;
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+
 @Entity
 @Table(name="books")
+@Getter
+@Setter
+
 
 public class Book {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "books_setup_seq_gen")
@@ -21,4 +27,5 @@ public class Book {
     @JoinColumn(name = "user_id", referencedColumnName = "id",
             foreignKey = @ForeignKey(name = "pk_id_fk_user_id"))
     private User user;
+
 }
