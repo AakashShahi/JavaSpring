@@ -4,6 +4,7 @@ import com.example.demo.entity.Book;
 import com.example.demo.entity.Ground;
 import com.example.demo.entity.User;
 import com.example.demo.pojo.BookPojo;
+import com.example.demo.projection.BookProjection;
 import com.example.demo.repository.BookRepository;
 import com.example.demo.repository.GroundRepository;
 import com.example.demo.repository.UserRepository;
@@ -33,12 +34,10 @@ public class BookServiceImpl implements BookService {
         book.setUser(user);
         bookRepository.save(book);
 
-
     }
 
-
     @Override
-    public List<Ground> findAll() {
+    public List<BookProjection> findAll() {
         return List.of();
     }
 }
