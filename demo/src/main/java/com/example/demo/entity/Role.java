@@ -1,11 +1,17 @@
 package com.example.demo.entity;
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.Collection;
 
 
 @Entity
 @Table(name="roles")
+@Getter
+@Setter
+@NoArgsConstructor
 public class Role {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "roles_setup_seq_gen")
     @SequenceGenerator(name = "roles_setup_seq_gen", sequenceName = "roles_setup_seq", allocationSize = 1)

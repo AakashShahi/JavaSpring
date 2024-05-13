@@ -21,12 +21,12 @@ public class GroundController {
 //        return this.groundService.getAll();
 //    }
 //
-//    @PostMapping("/save")
-//
-//    public void save(@RequestBody GroundPojo groundPojo){
-//
-//        this.groundService.saveData(groundPojo);
-//    }
+    @PostMapping("/save")
+
+    public void save(@RequestBody GroundPojo groundPojo){
+
+        this.groundService.saveData(groundPojo);
+    }
 
     @DeleteMapping("/delete/(id)")
     public ResponseEntity<String> deleteData(@PathVariable Integer id){
