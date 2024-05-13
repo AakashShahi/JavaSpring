@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import com.example.demo.entity.Ground;
+import com.example.demo.pojo.GroundPojo;
 import com.example.demo.service.GroundService;
 import com.example.demo.shared.pojo.GlobalApiResponse;
 import lombok.RequiredArgsConstructor;
@@ -43,29 +44,4 @@ public class GroundController {
         return GlobalApiResponse.<List<Ground>>builder().data(this.groundService.getAll()).statusCode(200).message("data retreived sucessfully").build();
     }
 
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
