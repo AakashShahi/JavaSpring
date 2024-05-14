@@ -1,9 +1,7 @@
 package com.example.demo.controller;
 
-import com.example.demo.entity.Book;
-import com.example.demo.entity.Ground;
 import com.example.demo.pojo.BookPojo;
-import com.example.demo.repository.BookRepository;
+import com.example.demo.projection.BookProjection;
 import com.example.demo.service.BookService;
 import com.example.demo.shared.pojo.GlobalApiResponse;
 import lombok.RequiredArgsConstructor;
@@ -28,9 +26,9 @@ public class BookController {
 //        return bookService.findAll();
 //    }
 @GetMapping
-public GlobalApiResponse<List<Ground>> getData() {
+public GlobalApiResponse<List<BookProjection>> getData() {
     return GlobalApiResponse.
-            <List<Ground>>builder()
+            <List<BookProjection>>builder()
             .data(this.bookService.findAll())
             .statusCode(200)
             .message("data retreived successfully")
